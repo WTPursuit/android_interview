@@ -18,9 +18,9 @@
 在正常情况下，一个Activity从启动到结束会以如下顺序经历整个生命周期：  
 onCreate\(\)-&gt;onStart\(\)-&gt;onResume\(\)-&gt;onPause\(\)-&gt;onStop\(\)-&gt;onDestory\(\)。包含了六个部分，还有一个onRestart\(\)没有调用，下面我们一一介绍这七部分内容。
 
-\(1\) onCreate\(\)：当 Activity 第一次创建时会被调用。这是生命周期的第一个方法。在这个方法中，可以做一些初始化工作，比如调用setContentView去加载界面布局资源，初始化Activity所需的数据。当然也可借助onCreate\(\)方法中的Bundle对象来回复异常情况下Activity结束时的状态（后面会介绍）。
+\(1\) onCreate\(\)：当 Activity 第一次创建时会被调用。这是生命周期的第一个方法。在这个方法中，可以做一些初始化工作，比如调用setContentView去加载界面布局资源，初始化Activity所需的数据。当然也可借助onCreate\(\)方法中的Bundle对象来恢复异常情况下Activity结束时的状态（后面会介绍）。
 
-\(2\) onRestart\(\)：表示Activity正在重新启动。一般情况下，当当前Activity从不可见重新变为可见状态时，onRestart就会被调用。这种情形一般是用户行为导致的，比如用户按Home键切换到桌面或打开了另一个新的Activity，接着用户又回到了这个Actvity。（关于这部分生命周期的历经过程，后面会介绍。）
+\(2\) onRestart\(\)：表示Activity正在重新启动。一般情况下，当前Activity从不可见重新变为可见状态时，onRestart就会被调用。这种情形一般是用户行为导致的，比如用户按Home键切换到桌面或打开了另一个新的Activity，接着用户又回到了这个Actvity。（关于这部分生命周期的历经过程，后面会介绍。）
 
 \(3\) onStart\(\): 表示Activity正在被启动，即将开始，这时Activity已经**出现**了，但是还没有出现在前台，无法与用户交互。这个时候可以理解为**Activity已经显示出来，但是我们还看不到。**
 
